@@ -21,12 +21,12 @@
     "slugs",
     "slugify"
   ],
-  "author": "Paul Smith <paulsmith@pobox.com>",
+  "author": "Moe Far <torkianfar@mfar.us>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/paulsmith/angular-slugify/issues"
   },
-  "homepage": "https://github.com/paulsmith/angular-slugify",
+  "homepage": "https://github.com/mhipo1364/angular-slugify",
   "dependencies": {
     "angular": "^1.0.x"
   },
