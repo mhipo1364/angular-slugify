@@ -255,14 +255,22 @@
         if (!s) return "";
         var ascii = [];
         var ch, cp;
+        var persian = false;
         for (var i = 0; i < s.length; i++) {
             if ((cp = s.charCodeAt(i)) < 0x180) {
                 ch = String.fromCharCode(cp);
                 ascii.push(charmap[ch] || ch);
             }
+            if (((cp = s.charCodeAt(i)) >= 1575 && (cp = s.charCodeAt(i)) <= 1740 )) {
+                persian = true;
+                ch = String.fromCharCode(cp);
+                ascii.push(charmap[ch] || ch);
+            }
         }
         s = ascii.join("");
-        s = s.replace(/[^\w\s-]/g, "").trim().toLowerCase();
+        if(!persian) {
+            s = s.replace(/[^\w\s-]/g, "").trim().toLowerCase();
+        }
         return s.replace(/[-\s]+/g, "-");
     }
 
